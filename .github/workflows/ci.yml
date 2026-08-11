@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            arch: arm64
+          - runner: macos-15-intel
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install release tools
+        run: brew install gitleaks ripgrep swift-format xcodegen
+      - name: Regenerate project
+        run: xcodegen generate
+      - name: Test
+        run: make test DESTINATION='platform=macOS,arch=${{ matrix.arch }}'
+      - name: Lint and audit
+        run: make lint && ./scripts/audit-release.sh
+      - name: Build
+        run: xcodebuild -project ScopedFolderMirror.xcodeproj -scheme ScopedFolderMirror -configuration Release -destination 'platform=macOS,arch=${{ matrix.arch }}' ARCHS='${{ matrix.arch }}' ONLY_ACTIVE_ARCH=YES build
