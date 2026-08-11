@@ -1,0 +1,77 @@
+name: Unsigned Preview Release
+
+on:
+  push:
+    tags: ['v*-preview.*']
+
+permissions:
+  contents: read
+
+jobs:
+  build-preview:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-15
+            arch: arm64
+          - runner: macos-15-intel
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install release tools
+        run: brew install gitleaks ripgrep swift-format xcodegen
+      - name: Build and verify unsigned preview
+        env:
+          VERSION: ${{ github.ref_name }}
+          ARCH: ${{ matrix.arch }}
+        run: |
+          xcodegen generate
+          make verify
+          make package-preview VERSION="${VERSION#v}" ARCH="$ARCH"
+      - name: Upload architecture artifact
+        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08
+        with:
+          name: preview-${{ matrix.arch }}
+          path: dist/*
+          if-no-files-found: error
+
+  publish-prerelease:
+    needs: build-preview
+    runs-on: macos-15
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - name: Download verified artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download "$GITHUB_RUN_ID" --repo "$GITHUB_REPOSITORY" --dir artifacts
+      - name: Publish unsigned prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          find artifacts -name '*.dmg' -exec shasum -a 256 {} \; | sed 's#  .*/#  #' > SHA256SUMS
+          printf '%s\n\n%s\n' \
+            'UNSIGNED PREVIEW' \
+            'Gatekeeper has not verified the publisher. Use Finder Open or macOS Open Anyway if prompted. Never disable Gatekeeper globally.' \
+            > RELEASE_NOTES.md
+          if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release edit "$GITHUB_REF_NAME" \
+              --repo "$GITHUB_REPOSITORY" \
+              --prerelease \
+              --title "Scoped Folder Mirror ${GITHUB_REF_NAME} - UNSIGNED PREVIEW" \
+              --notes-file RELEASE_NOTES.md
+            gh release upload "$GITHUB_REF_NAME" \
+              --repo "$GITHUB_REPOSITORY" \
+              --clobber \
+              artifacts/*/*.dmg SHA256SUMS
+          else
+            gh release create "$GITHUB_REF_NAME" \
+              --repo "$GITHUB_REPOSITORY" \
+              --prerelease \
+              --title "Scoped Folder Mirror ${GITHUB_REF_NAME} - UNSIGNED PREVIEW" \
+              --notes-file RELEASE_NOTES.md \
+              artifacts/*/*.dmg SHA256SUMS
+          fi

@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00833BB12F018CC68335D86E /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577B589CDE3DED555E26896 /* TestSupport.swift */; };
+		07E83160908DD6EB91C2C49D /* TransactionRecoveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AFC4C325C2971218CF297 /* TransactionRecoveryTests.swift */; };
+		097325802E517C5BC91FD69D /* ScopedFolderMirrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A35DA6D60B19205439D1C /* ScopedFolderMirrorUITests.swift */; };
+		13B28E1BD0D047521025EC34 /* ActivityLogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1084D1B49EEE7295E46518DB /* ActivityLogStore.swift */; };
+		18ED6E23F40DDFB721329621 /* SyncTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B48614B315DF10603FA64A /* SyncTypes.swift */; };
+		1E63CD8E40555BE94ABD8F1B /* TransactionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB908CAF89675EFBC8E7CD /* TransactionLayout.swift */; };
+		21080F6F4AB351FDD69FDFD2 /* ManifestAndTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7E0C0C73A2CF3FF627A99 /* ManifestAndTransactionTests.swift */; };
+		22BB8A6BF3BA2A22C6EC9829 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9BEFC151475A390EFCAA7F /* SyncCoordinator.swift */; };
+		23A90F378FB3D1F17D107321 /* TransactionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B73AE75C053296B7F92806C /* TransactionState.swift */; };
+		32582741C9AAE565C87080B1 /* CoordinatorSafetyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1568737315986859EAD06 /* CoordinatorSafetyTests.swift */; };
+		404EC7AF9B6E49EEFA86992D /* StabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1AB35098FE16CEAE0C33B /* StabilityTests.swift */; };
+		57C68E757E32800EF06435DC /* StableSourceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE03F67E44D91AEB737F531D /* StableSourceDetector.swift */; };
+		6C29334580042585E75D1CE3 /* FolderRelationshipValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215290D24809F4ADA2F03453 /* FolderRelationshipValidator.swift */; };
+		7ADF6B8917382A8AFE7142D1 /* FolderMirrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042496EADA33E06E3D202493 /* FolderMirrorViewModel.swift */; };
+		8D910284C1334CDEE5E034CD /* LaunchAtLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DA1C9A74A4258ED47FFA87 /* LaunchAtLoginController.swift */; };
+		918F94A698CB6F9E4BFB0D1E /* DestinationOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149555E4A468A390DF068EC /* DestinationOwnership.swift */; };
+		99B23441C5217D7C115FA5EB /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B8476B573BD312B188F6A1 /* SetupView.swift */; };
+		A1B30200F176F0934D10C3B6 /* ScopedFolderMirrorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0E87B28B24038AA8EC81E6 /* ScopedFolderMirrorApp.swift */; };
+		A231D8BCD049ED8E4981F607 /* FolderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C774E650D0BE3AD8AC092D8A /* FolderSelectionController.swift */; };
+		AB19633C66DB3BB2CA044BF4 /* SourceManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D23EE42CA724CAAC6AAFCD /* SourceManifest.swift */; };
+		AE233F906E6AE497D66CEF48 /* ConfigurationAndPrivacyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A8E4CFCEE58BE24EA2F281 /* ConfigurationAndPrivacyTests.swift */; };
+		AE5A174BF87D65013A581770 /* DestinationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A53DD638B9821AF60EFDE9 /* DestinationCoordinator.swift */; };
+		B279F05A749AAE2B090A6790 /* SourceChangeMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E4A7645271CD96CDCC6F4 /* SourceChangeMonitor.swift */; };
+		B899C4BDAE5F84D94EFACD26 /* MirrorTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB44DCAA8ADAEBC0CBE515B8 /* MirrorTransaction.swift */; };
+		C032A79AB80BF36B0A7543BC /* ConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850B4F21BEAA64D4031AB9D8 /* ConfigurationStore.swift */; };
+		C63EF792AF7DC32644BFBF78 /* TransactionRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F919412A762F0D40100CC5 /* TransactionRecovery.swift */; };
+		D2C4B44A7EF3B32C49061521 /* VolumeMountMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9B54C4B3A2CEBD763252B /* VolumeMountMonitor.swift */; };
+		D34AABBE7DB304B08FCDA4F1 /* VolumeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F83DAA4AFA82D322B985D /* VolumeAccess.swift */; };
+		D57DEB728720890A74664A91 /* SafeFileTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1870A7E1341383260B91C6 /* SafeFileTree.swift */; };
+		DF39B0207714CB292F230239 /* SecurityScopeLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2BAE498ABB0C88142645C /* SecurityScopeLease.swift */; };
+		E42E9592431344FA6D62BEA0 /* SourceAvailabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4EFAD416BE06135D95426B /* SourceAvailabilityTests.swift */; };
+		F002FDFCC98130E0A502C8BD /* ActivityMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C509D19F893A60C84AFA0FAE /* ActivityMessages.swift */; };
+		F1501AB46FB3539433F44594 /* MirrorStaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746FE684F2DAD4B7E0C15453 /* MirrorStaging.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		081FAFD10A3FAF93160992ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18354EFEC04C782C7E4A619 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE4BE0569196B6E5915D746;
+			remoteInfo = ScopedFolderMirror;
+		};
+		EE6A1613D14D9527C139FD64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18354EFEC04C782C7E4A619 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFE4BE0569196B6E5915D746;
+			remoteInfo = ScopedFolderMirror;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002E4A7645271CD96CDCC6F4 /* SourceChangeMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceChangeMonitor.swift; sourceTree = "<group>"; };
+		042496EADA33E06E3D202493 /* FolderMirrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderMirrorViewModel.swift; sourceTree = "<group>"; };
+		1084D1B49EEE7295E46518DB /* ActivityLogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogStore.swift; sourceTree = "<group>"; };
+		1940AB4EE8119A241E44927A /* ScopedFolderMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScopedFolderMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		215290D24809F4ADA2F03453 /* FolderRelationshipValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRelationshipValidator.swift; sourceTree = "<group>"; };
+		37D23EE42CA724CAAC6AAFCD /* SourceManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceManifest.swift; sourceTree = "<group>"; };
+		37DA1C9A74A4258ED47FFA87 /* LaunchAtLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginController.swift; sourceTree = "<group>"; };
+		4B73AE75C053296B7F92806C /* TransactionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionState.swift; sourceTree = "<group>"; };
+		4CB7E0C0C73A2CF3FF627A99 /* ManifestAndTransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestAndTransactionTests.swift; sourceTree = "<group>"; };
+		59B8476B573BD312B188F6A1 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		5A9BEFC151475A390EFCAA7F /* SyncCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncCoordinator.swift; sourceTree = "<group>"; };
+		66C2BAE498ABB0C88142645C /* SecurityScopeLease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityScopeLease.swift; sourceTree = "<group>"; };
+		737F83DAA4AFA82D322B985D /* VolumeAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeAccess.swift; sourceTree = "<group>"; };
+		746FE684F2DAD4B7E0C15453 /* MirrorStaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorStaging.swift; sourceTree = "<group>"; };
+		7AA1AB35098FE16CEAE0C33B /* StabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StabilityTests.swift; sourceTree = "<group>"; };
+		8149555E4A468A390DF068EC /* DestinationOwnership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationOwnership.swift; sourceTree = "<group>"; };
+		850B4F21BEAA64D4031AB9D8 /* ConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStore.swift; sourceTree = "<group>"; };
+		88B48614B315DF10603FA64A /* SyncTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTypes.swift; sourceTree = "<group>"; };
+		8F4EFAD416BE06135D95426B /* SourceAvailabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAvailabilityTests.swift; sourceTree = "<group>"; };
+		A3A8E4CFCEE58BE24EA2F281 /* ConfigurationAndPrivacyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationAndPrivacyTests.swift; sourceTree = "<group>"; };
+		A5A53DD638B9821AF60EFDE9 /* DestinationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationCoordinator.swift; sourceTree = "<group>"; };
+		BB44DCAA8ADAEBC0CBE515B8 /* MirrorTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirrorTransaction.swift; sourceTree = "<group>"; };
+		C2E1568737315986859EAD06 /* CoordinatorSafetyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSafetyTests.swift; sourceTree = "<group>"; };
+		C2EB908CAF89675EFBC8E7CD /* TransactionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLayout.swift; sourceTree = "<group>"; };
+		C509D19F893A60C84AFA0FAE /* ActivityMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMessages.swift; sourceTree = "<group>"; };
+		C774E650D0BE3AD8AC092D8A /* FolderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderSelectionController.swift; sourceTree = "<group>"; };
+		CB0E87B28B24038AA8EC81E6 /* ScopedFolderMirrorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopedFolderMirrorApp.swift; sourceTree = "<group>"; };
+		CE587E9D14878A8208BE2CE3 /* ScopedFolderMirrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScopedFolderMirrorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC1870A7E1341383260B91C6 /* SafeFileTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeFileTree.swift; sourceTree = "<group>"; };
+		E03AFC4C325C2971218CF297 /* TransactionRecoveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecoveryTests.swift; sourceTree = "<group>"; };
+		E54A35DA6D60B19205439D1C /* ScopedFolderMirrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopedFolderMirrorUITests.swift; sourceTree = "<group>"; };
+		E577B589CDE3DED555E26896 /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		E5B9B54C4B3A2CEBD763252B /* VolumeMountMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeMountMonitor.swift; sourceTree = "<group>"; };
+		E958264DCCE0E79068EB29C0 /* ScopedFolderMirrorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScopedFolderMirrorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F919412A762F0D40100CC5 /* TransactionRecovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRecovery.swift; sourceTree = "<group>"; };
+		FE03F67E44D91AEB737F531D /* StableSourceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableSourceDetector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1FF8A1CCB7EB81B6A4A9C628 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1084D1B49EEE7295E46518DB /* ActivityLogStore.swift */,
+				850B4F21BEAA64D4031AB9D8 /* ConfigurationStore.swift */,
+				A5A53DD638B9821AF60EFDE9 /* DestinationCoordinator.swift */,
+				8149555E4A468A390DF068EC /* DestinationOwnership.swift */,
+				C774E650D0BE3AD8AC092D8A /* FolderSelectionController.swift */,
+				37DA1C9A74A4258ED47FFA87 /* LaunchAtLoginController.swift */,
+				66C2BAE498ABB0C88142645C /* SecurityScopeLease.swift */,
+				002E4A7645271CD96CDCC6F4 /* SourceChangeMonitor.swift */,
+				737F83DAA4AFA82D322B985D /* VolumeAccess.swift */,
+				E5B9B54C4B3A2CEBD763252B /* VolumeMountMonitor.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		6DAA2C370ACB494DCF48720D /* ScopedFolderMirrorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3A8E4CFCEE58BE24EA2F281 /* ConfigurationAndPrivacyTests.swift */,
+				C2E1568737315986859EAD06 /* CoordinatorSafetyTests.swift */,
+				4CB7E0C0C73A2CF3FF627A99 /* ManifestAndTransactionTests.swift */,
+				8F4EFAD416BE06135D95426B /* SourceAvailabilityTests.swift */,
+				7AA1AB35098FE16CEAE0C33B /* StabilityTests.swift */,
+				E577B589CDE3DED555E26896 /* TestSupport.swift */,
+				E03AFC4C325C2971218CF297 /* TransactionRecoveryTests.swift */,
+			);
+			path = ScopedFolderMirrorTests;
+			sourceTree = "<group>";
+		};
+		94B887137206EFDDCDF5CA62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1940AB4EE8119A241E44927A /* ScopedFolderMirror.app */,
+				E958264DCCE0E79068EB29C0 /* ScopedFolderMirrorTests.xctest */,
+				CE587E9D14878A8208BE2CE3 /* ScopedFolderMirrorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D74AEED5863F9D32C678916 /* ScopedFolderMirrorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E54A35DA6D60B19205439D1C /* ScopedFolderMirrorUITests.swift */,
+			);
+			path = ScopedFolderMirrorUITests;
+			sourceTree = "<group>";
+		};
+		A18AD029368B158F05BE19F3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB0E87B28B24038AA8EC81E6 /* ScopedFolderMirrorApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B02C9214F77823551E1E060A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C509D19F893A60C84AFA0FAE /* ActivityMessages.swift */,
+				042496EADA33E06E3D202493 /* FolderMirrorViewModel.swift */,
+				59B8476B573BD312B188F6A1 /* SetupView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BBF376AB7E92457AEC076D22 = {
+			isa = PBXGroup;
+			children = (
+				DFF1EF18E5BC803C51F30176 /* ScopedFolderMirror */,
+				6DAA2C370ACB494DCF48720D /* ScopedFolderMirrorTests */,
+				9D74AEED5863F9D32C678916 /* ScopedFolderMirrorUITests */,
+				94B887137206EFDDCDF5CA62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D58AA8D14AFF8223A6130260 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				215290D24809F4ADA2F03453 /* FolderRelationshipValidator.swift */,
+				746FE684F2DAD4B7E0C15453 /* MirrorStaging.swift */,
+				BB44DCAA8ADAEBC0CBE515B8 /* MirrorTransaction.swift */,
+				DC1870A7E1341383260B91C6 /* SafeFileTree.swift */,
+				37D23EE42CA724CAAC6AAFCD /* SourceManifest.swift */,
+				FE03F67E44D91AEB737F531D /* StableSourceDetector.swift */,
+				5A9BEFC151475A390EFCAA7F /* SyncCoordinator.swift */,
+				88B48614B315DF10603FA64A /* SyncTypes.swift */,
+				C2EB908CAF89675EFBC8E7CD /* TransactionLayout.swift */,
+				F1F919412A762F0D40100CC5 /* TransactionRecovery.swift */,
+				4B73AE75C053296B7F92806C /* TransactionState.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DFF1EF18E5BC803C51F30176 /* ScopedFolderMirror */ = {
+			isa = PBXGroup;
+			children = (
+				A18AD029368B158F05BE19F3 /* App */,
+				D58AA8D14AFF8223A6130260 /* Domain */,
+				B02C9214F77823551E1E060A /* Features */,
+				1FF8A1CCB7EB81B6A4A9C628 /* Infrastructure */,
+			);
+			path = ScopedFolderMirror;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D7DE7C76D73C952D77DCFEC /* ScopedFolderMirrorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F80F51E645E2FD344748B5EE /* Build configuration list for PBXNativeTarget "ScopedFolderMirrorUITests" */;
+			buildPhases = (
+				931246FB60C409A876CE4F69 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D38E40ED90F52DE3FA48E8C9 /* PBXTargetDependency */,
+			);
+			name = ScopedFolderMirrorUITests;
+			packageProductDependencies = (
+			);
+			productName = ScopedFolderMirrorUITests;
+			productReference = CE587E9D14878A8208BE2CE3 /* ScopedFolderMirrorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		7173D0FB42F73217941E843D /* ScopedFolderMirrorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F59EE4BB7C5A16A6B0860B82 /* Build configuration list for PBXNativeTarget "ScopedFolderMirrorTests" */;
+			buildPhases = (
+				4D8B78DDA79AEF5426C93F37 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D29DC4E83F2F643FDCDD6B3 /* PBXTargetDependency */,
+			);
+			name = ScopedFolderMirrorTests;
+			packageProductDependencies = (
+			);
+			productName = ScopedFolderMirrorTests;
+			productReference = E958264DCCE0E79068EB29C0 /* ScopedFolderMirrorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFE4BE0569196B6E5915D746 /* ScopedFolderMirror */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB3F95EA89373A718D1E9B60 /* Build configuration list for PBXNativeTarget "ScopedFolderMirror" */;
+			buildPhases = (
+				173E134D3D47C8D272BFF921 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScopedFolderMirror;
+			packageProductDependencies = (
+			);
+			productName = ScopedFolderMirror;
+			productReference = 1940AB4EE8119A241E44927A /* ScopedFolderMirror.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C18354EFEC04C782C7E4A619 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3D7DE7C76D73C952D77DCFEC = {
+						ProvisioningStyle = Manual;
+						TestTargetID = FFE4BE0569196B6E5915D746;
+					};
+					7173D0FB42F73217941E843D = {
+						ProvisioningStyle = Manual;
+					};
+					FFE4BE0569196B6E5915D746 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 68970C946398B2AC10754977 /* Build configuration list for PBXProject "ScopedFolderMirror" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = BBF376AB7E92457AEC076D22;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 94B887137206EFDDCDF5CA62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFE4BE0569196B6E5915D746 /* ScopedFolderMirror */,
+				7173D0FB42F73217941E843D /* ScopedFolderMirrorTests */,
+				3D7DE7C76D73C952D77DCFEC /* ScopedFolderMirrorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		173E134D3D47C8D272BFF921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13B28E1BD0D047521025EC34 /* ActivityLogStore.swift in Sources */,
+				F002FDFCC98130E0A502C8BD /* ActivityMessages.swift in Sources */,
+				C032A79AB80BF36B0A7543BC /* ConfigurationStore.swift in Sources */,
+				AE5A174BF87D65013A581770 /* DestinationCoordinator.swift in Sources */,
+				918F94A698CB6F9E4BFB0D1E /* DestinationOwnership.swift in Sources */,
+				7ADF6B8917382A8AFE7142D1 /* FolderMirrorViewModel.swift in Sources */,
+				6C29334580042585E75D1CE3 /* FolderRelationshipValidator.swift in Sources */,
+				A231D8BCD049ED8E4981F607 /* FolderSelectionController.swift in Sources */,
+				8D910284C1334CDEE5E034CD /* LaunchAtLoginController.swift in Sources */,
+				F1501AB46FB3539433F44594 /* MirrorStaging.swift in Sources */,
+				B899C4BDAE5F84D94EFACD26 /* MirrorTransaction.swift in Sources */,
+				D57DEB728720890A74664A91 /* SafeFileTree.swift in Sources */,
+				A1B30200F176F0934D10C3B6 /* ScopedFolderMirrorApp.swift in Sources */,
+				DF39B0207714CB292F230239 /* SecurityScopeLease.swift in Sources */,
+				99B23441C5217D7C115FA5EB /* SetupView.swift in Sources */,
+				B279F05A749AAE2B090A6790 /* SourceChangeMonitor.swift in Sources */,
+				AB19633C66DB3BB2CA044BF4 /* SourceManifest.swift in Sources */,
+				57C68E757E32800EF06435DC /* StableSourceDetector.swift in Sources */,
+				22BB8A6BF3BA2A22C6EC9829 /* SyncCoordinator.swift in Sources */,
+				18ED6E23F40DDFB721329621 /* SyncTypes.swift in Sources */,
+				1E63CD8E40555BE94ABD8F1B /* TransactionLayout.swift in Sources */,
+				C63EF792AF7DC32644BFBF78 /* TransactionRecovery.swift in Sources */,
+				23A90F378FB3D1F17D107321 /* TransactionState.swift in Sources */,
+				D34AABBE7DB304B08FCDA4F1 /* VolumeAccess.swift in Sources */,
+				D2C4B44A7EF3B32C49061521 /* VolumeMountMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D8B78DDA79AEF5426C93F37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE233F906E6AE497D66CEF48 /* ConfigurationAndPrivacyTests.swift in Sources */,
+				32582741C9AAE565C87080B1 /* CoordinatorSafetyTests.swift in Sources */,
+				21080F6F4AB351FDD69FDFD2 /* ManifestAndTransactionTests.swift in Sources */,
+				E42E9592431344FA6D62BEA0 /* SourceAvailabilityTests.swift in Sources */,
+				404EC7AF9B6E49EEFA86992D /* StabilityTests.swift in Sources */,
+				00833BB12F018CC68335D86E /* TestSupport.swift in Sources */,
+				07E83160908DD6EB91C2C49D /* TransactionRecoveryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931246FB60C409A876CE4F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097325802E517C5BC91FD69D /* ScopedFolderMirrorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D29DC4E83F2F643FDCDD6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE4BE0569196B6E5915D746 /* ScopedFolderMirror */;
+			targetProxy = EE6A1613D14D9527C139FD64 /* PBXContainerItemProxy */;
+		};
+		D38E40ED90F52DE3FA48E8C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFE4BE0569196B6E5915D746 /* ScopedFolderMirror */;
+			targetProxy = 081FAFD10A3FAF93160992ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B942FCA1FD60265DF8693CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirrorUITests;
+				PRODUCT_NAME = ScopedFolderMirrorUITests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = ScopedFolderMirror;
+			};
+			name = Release;
+		};
+		21AE62DDD0CC62D3A022F67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirrorTests;
+				PRODUCT_NAME = ScopedFolderMirrorTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScopedFolderMirror.app/Contents/MacOS/ScopedFolderMirror";
+			};
+			name = Release;
+		};
+		27D8F19ECDEB12E386F7DD2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_CODE_COVERAGE = NO;
+				EXECUTABLE_NAME = ScopedFolderMirror;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_MODULE_NAME = ScopedFolderMirror;
+				PRODUCT_NAME = ScopedFolderMirror;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = all;
+			};
+			name = Release;
+		};
+		A4828E5D7AA871B9BCFC6071 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirrorTests;
+				PRODUCT_NAME = ScopedFolderMirrorTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScopedFolderMirror.app/Contents/MacOS/ScopedFolderMirror";
+			};
+			name = Debug;
+		};
+		AD4946B451DF72D1694A9F53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_NAME = ScopedFolderMirror;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_MODULE_NAME = ScopedFolderMirror;
+				PRODUCT_NAME = ScopedFolderMirror;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4DD144F2BD6DA3F5BC0C3F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirrorUITests;
+				PRODUCT_NAME = ScopedFolderMirrorUITests;
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = ScopedFolderMirror;
+			};
+			name = Debug;
+		};
+		EC4F69A971747295402C7093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/ScopedFolderMirror.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scoped Folder Mirror";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirror;
+				PRODUCT_NAME = "Scoped Folder Mirror";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		FC326CAA2728FB01622D3CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/ScopedFolderMirror.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scoped Folder Mirror";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.arthursvpb.ScopedFolderMirror;
+				PRODUCT_NAME = "Scoped Folder Mirror";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68970C946398B2AC10754977 /* Build configuration list for PBXProject "ScopedFolderMirror" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC326CAA2728FB01622D3CF0 /* Debug */,
+				EC4F69A971747295402C7093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EB3F95EA89373A718D1E9B60 /* Build configuration list for PBXNativeTarget "ScopedFolderMirror" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD4946B451DF72D1694A9F53 /* Debug */,
+				27D8F19ECDEB12E386F7DD2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F59EE4BB7C5A16A6B0860B82 /* Build configuration list for PBXNativeTarget "ScopedFolderMirrorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4828E5D7AA871B9BCFC6071 /* Debug */,
+				21AE62DDD0CC62D3A022F67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F80F51E645E2FD344748B5EE /* Build configuration list for PBXNativeTarget "ScopedFolderMirrorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4DD144F2BD6DA3F5BC0C3F3 /* Debug */,
+				1B942FCA1FD60265DF8693CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C18354EFEC04C782C7E4A619 /* Project object */;
+}

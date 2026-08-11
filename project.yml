@@ -1,0 +1,77 @@
+name: ScopedFolderMirror
+options:
+  minimumXcodeGenVersion: 2.46.0
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    PRODUCT_BUNDLE_IDENTIFIER: io.github.arthursvpb.ScopedFolderMirror
+    PRODUCT_NAME: Scoped Folder Mirror
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_ENTITLEMENTS: Configuration/ScopedFolderMirror.entitlements
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: Scoped Folder Mirror
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+    INFOPLIST_KEY_LSUIElement: YES
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: 1
+targets:
+  ScopedFolderMirror:
+    type: application
+    platform: macOS
+    sources:
+      - ScopedFolderMirror
+    settings:
+      base:
+        PRODUCT_NAME: ScopedFolderMirror
+        PRODUCT_MODULE_NAME: ScopedFolderMirror
+        EXECUTABLE_NAME: ScopedFolderMirror
+      configs:
+        Release:
+          CLANG_ENABLE_CODE_COVERAGE: NO
+          DEPLOYMENT_POSTPROCESSING: YES
+          ENABLE_CODE_COVERAGE: NO
+          STRIP_INSTALLED_PRODUCT: YES
+          STRIP_STYLE: all
+  ScopedFolderMirrorTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - ScopedFolderMirrorTests
+    dependencies:
+      - target: ScopedFolderMirror
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.arthursvpb.ScopedFolderMirrorTests
+        PRODUCT_NAME: ScopedFolderMirrorTests
+        CODE_SIGN_ENTITLEMENTS: ""
+  ScopedFolderMirrorUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    sources:
+      - ScopedFolderMirrorUITests
+    dependencies:
+      - target: ScopedFolderMirror
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: io.github.arthursvpb.ScopedFolderMirrorUITests
+        PRODUCT_NAME: ScopedFolderMirrorUITests
+        TEST_TARGET_NAME: ScopedFolderMirror
+        CODE_SIGN_ENTITLEMENTS: ""
+schemes:
+  ScopedFolderMirror:
+    build:
+      targets:
+        ScopedFolderMirror: all
+        ScopedFolderMirrorTests: [test]
+        ScopedFolderMirrorUITests: [test]
+    test:
+      gatherCoverageData: true
+      targets:
+        - ScopedFolderMirrorTests
+        - ScopedFolderMirrorUITests
