@@ -3,7 +3,9 @@
 Scoped Folder Mirror is a sandboxed macOS 14+ menu-bar app that mirrors one user-selected source folder to one dedicated folder on an external volume.
 
 <p align="center">
-  <img src=".github/images/preview.png" alt="Scoped Folder Mirror menu-bar interface" width="413">
+  <kbd>
+    <img src=".github/images/preview.png" alt="Scoped Folder Mirror menu-bar interface" width="413" style="border: 4px solid white;">
+  </kbd>
 </p>
 
 ## Why This Exists
